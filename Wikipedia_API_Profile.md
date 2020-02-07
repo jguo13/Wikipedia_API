@@ -92,7 +92,7 @@ radius_df.to_csv("earthquake_hotspots.csv")
 The last step is also the easiest! just go ahead and convert the list into a pandas dataframe (just another data structure which we use mainly bc it has a very easy built in function for csv conversion). Then, you can save it to a csv file. You can give it any name you want, here I chose the name "earth_quake_hotspots.csv." It will be saved in parallel to your python file. And you're done! You can even take this further and create a bot (wikipedia is bot friendly) that can auto generate these results, or even combs pages to try to catch when a major change has been made. (For example, did someone post something crazy on the Trump page?)
 
 
-======
+
 ## Log
 1. I started by visiting the installation page for wikipedia:
 <https://pypi.org/project/wikipedia/>
