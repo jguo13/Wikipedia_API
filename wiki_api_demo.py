@@ -10,7 +10,7 @@ import pandas as pd
 ## turn on and off auto-suggestions
 search_param = "Hamilton"
 num_results = 100
-print(wikipedia.search("Hamilton", results = num_results, suggestion = True))
+print(wikipedia.search(search_param, results = num_results, suggestion = True))
 
 ## Query 2: finding wikipedia articles related to longitude and latitude 
 ## coordinates. These coordinates for example are from a california earthquake
@@ -23,8 +23,8 @@ print(wikipedia.geosearch(latitude, longitude, radius = 10000))
 #Query 3: Opening up a wikipedia page, and then you can access features in the WikipediaPage
 ## object like the content (a full printout of the entire page) or images, a list of all the image urls in that page
 Columbia_University = wikipedia.WikipediaPage("Columbia University")
-# print(Columbia_University.content)
-# print(Columbia_University.images)
+print(Columbia_University.content)
+print(Columbia_University.images)
 
 ##with these queries, you can build cool datasets like the following, where you can get a csv of wikipedia articles that happen around earthquake coordinates:
 
