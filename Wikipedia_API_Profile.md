@@ -11,6 +11,7 @@ This demo will walk through two different ways of accessing the api:
 1. Through python api
 2. Through a browser url (aka REST api)
 
+The queries shown in the browser url section are all translations of the queries which are shown in the python section.
 
 ======
 # Python
@@ -108,6 +109,9 @@ https://en.wikipedia.org/w/api.php + args
 
 And you chain the args together with an ampersand, &
 ### Query 1:
+
+This query is an example of a generic search on the wikipedia REST api with a search term:
+
 https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Alexander%20Hamilton&format=json&srlimit=100
 
 In the above url, the main args are:
@@ -121,9 +125,83 @@ this means you are querying the wikipedia api, aka you are fetching data. You wi
 list = search
 ```
 
+list is a submodule of the query class, it will list out any wikipedia pages that matches your search parameter
+
+```
+srsearch = Alexander%20Hamilton
+
+```
+
+performs a GET request to return a page matching the title or text with "Alexander Hamilton" 
+Note, the "%20" stands for a space here.
+
+```
+format = json
+```
+The data structure of the returning data is json. If you specify jsonfm instead, it is a bit easeier to read in a browser.
+
+### Query 2:
+
+This query is an example of a geosearch on the Wikipedia REST api using latitude and longitude:
+
+https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=35.3400%7C-120.1900&gsradius=10000&format=json
+
+In the above url, the main args are:
+
+```
+action = query
+```
+this means you are querying the wikipedia api, aka you are fetching data. You will almost always ahve action = query.
+
+```
+list = geosearch
+```
+
+list is a submodule of the query class, it will list out any wikipedia pages that matches your geographic coordinates
+
+```
+gscoord = 35.3400%7C-120.1900
+
+```
+gscoord is the geographic coordinates you are wanting to search. Here, the format is the latitude comes first, then the "%7C" symbol, then the longitude.
+
+```
+gsradius=10000
+```
+gsradius specifies the radius that the match will look within, given in meters.
+```
+format = json
+```
+The data structure of the returning data is json. If you specify jsonfm instead, it is a bit easeier to read in a browser.
+
+### Query 3:
+This query retrieves the entire webpage in json format for the Columbia University wikipedia page entry: 
+
+https://en.wikipedia.org/w/api.php?action=query&titles=Columbia%20University&prop=extracts&format=json
 
 
+In the above url, the main args are:
 
+```
+action = query
+```
+this means you are querying the wikipedia api, aka you are fetching data. You will almost always ahve action = query.
+
+```
+titles = Columbia%20University
+```
+
+this is the title of the webpage you are looking for. In this case we use Columbia University. 
+
+```
+prop = extracts
+
+```
+this will return text extracts of all the html elements in the page.
+```
+format = json
+```
+The data structure of the returning data is json. If you specify jsonfm instead, it is a bit easeier to read in a browser.
 
 ## Log
 1. I started by visiting the installation page for wikipedia:
@@ -134,5 +212,8 @@ list = search
 5. I looked up an earthquake coordinate, and found that wikipedia could return results that are very closely related to that region. For example, when I gave it the coordinates of an earthquake in southern california, it returned three results all related to La Panza, California, which is where the earthquake happened. From these results I was able to realize that there is actually a canyon there (one of the results is "La Panza Canyon"), implying that this could be on top of a major fault line. 
 6. I ran into some issues trying to understand what some of the parameters of the functions did, for example it wasn't very clear to me what the maximum return results could be set as, and the python wikipedia page library was a little lacking in those details. But, I realized that it was really just a wrapper for the rest apis so I found the answers I couldn't on the python documentation page on the original wikipedia api page. 
 5. Finally I settled on saving the final output as a csv, and chose to do a quick conversion to a pandas dataframe to do so since a csv would be easy to read and open and manipulate for a journalist. 
+6. As a last additional step, I also translated all three python queries into regular REST api queries, allowing for easier debugging of search parameters in a browser window. 
+
+
 
 
