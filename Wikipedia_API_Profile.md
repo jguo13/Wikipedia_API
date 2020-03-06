@@ -119,7 +119,7 @@ In the above url, the main args are:
 ```
 action = query
 ```
-this means you are querying the wikipedia api, aka you are fetching data. You will almost always ahve action = query.
+this means you are querying the wikipedia api, aka you are fetching data. You will almost always have action = query.
 
 ```
 list = search
@@ -151,7 +151,7 @@ In the above url, the main args are:
 ```
 action = query
 ```
-this means you are querying the wikipedia api, aka you are fetching data. You will almost always ahve action = query.
+this means you are querying the wikipedia api, aka you are fetching data. You will almost always have action = query.
 
 ```
 list = geosearch
@@ -185,7 +185,7 @@ In the above url, the main args are:
 ```
 action = query
 ```
-this means you are querying the wikipedia api, aka you are fetching data. You will almost always ahve action = query.
+this means you are querying the wikipedia api, aka you are fetching data. You will almost always have action = query.
 
 ```
 titles = Columbia%20University
