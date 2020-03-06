@@ -13,7 +13,7 @@ This demo will walk through two different ways of accessing the api:
 
 The queries shown in the browser url section are all translations of the queries which are shown in the python section.
 
-======
+
 # Python
 ## Setup
 ### Set up your environment
@@ -99,7 +99,7 @@ radius_df.to_csv("earthquake_hotspots.csv")
 The last step is also the easiest! just go ahead and convert the list into a pandas dataframe (just another data structure which we use mainly bc it has a very easy built in function for csv conversion). Then, you can save it to a csv file. You can give it any name you want, here I chose the name "earth_quake_hotspots.csv." It will be saved in parallel to your python file. And you're done! You can even take this further and create a bot (wikipedia is bot friendly) that can auto generate these results, or even combs pages to try to catch when a major change has been made. (For example, did someone post something crazy on the Trump page?)
 
 
-======
+
 # Browser URL (aka REST api)
 ## Setup
 To access a url you just input these queries into any browser, like your default safari if you have mac or internet explore if you have windows, etc. 
