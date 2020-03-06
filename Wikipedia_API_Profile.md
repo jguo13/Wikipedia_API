@@ -7,7 +7,31 @@ To read more extensive documentation on the python library wikipedia, visit this
 
 To read more extensive documentation on the api in general that the library wraps around, visit this url: <https://en.wikipedia.org/w/api.php>
 
+This demo will walk through two different ways of accessing the api:
+1. Through a browser url (aka REST api)
+2. Through python api
+
 ======
+# Browser URL (aka REST api)
+## Setup
+To access a url you just input these queries into any browser, like your default safari if you have mac or internet explore if you have windows, etc. 
+
+The general formula for these urls is:
+https://en.wikipedia.org/w/api.php + args
+
+### Query 1:
+https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Alexander%20Hamilton&format=jsonfm
+
+In the above url, the main args are:
+
+```action = query
+```
+
+list = search 
+
+
+======
+# Python
 ## Setup
 ### Set up your environment
 You will need to install the wikipedia library within python. This is most easily done by using python's package manager, pip, through the command `pip install wikipedia`. In addition to wikipedia library, we will be using pandas, a library which makes it very easy to handle data and to write csv files. You can download this library with the command: `pip install pandas`. 
