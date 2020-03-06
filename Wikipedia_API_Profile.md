@@ -24,7 +24,8 @@ https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Alexander%2
 
 In the above url, the main args are:
 
-```action = query
+```
+action = query
 ```
 
 list = search 
