@@ -102,7 +102,7 @@ The last step is also the easiest! just go ahead and convert the list into a pan
 
 # Browser URL (aka REST api)
 ## Setup
-To access a url you just input these queries into any browser, like your default safari if you have mac or internet explore if you have windows, etc. 
+To access a url you just input these queries into any browser, like your default safari if you have mac or internet explorer if you have windows, etc. 
 
 The general formula for these urls is:
 https://en.wikipedia.org/w/api.php + args
