@@ -191,7 +191,7 @@ this means you are querying the wikipedia api, aka you are fetching data. You wi
 titles = Columbia%20University
 ```
 
-this is the title of the webpage you are looking for. In this case we use Columbia University. 
+this is the title of the webpage you are looking for. In this case we use Columbia University. Note the "%20" stands for space.
 
 ```
 prop = extracts
